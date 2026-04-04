@@ -1,0 +1,981 @@
+/* THIS CSS FILE CONTAINS THE BASE STYLE FOR ALL THE WEB PAGES */
+/* FONT FACES */
+@font-face {
+  src: url(../ttf/Inter-Light.ttf) format("truetype");
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/Inter-Regular.ttf) format("truetype");
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/Inter-Medium.ttf) format("truetype");
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/Inter-Bold.ttf) format("truetype");
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/PlayfairDisplay-Regular.ttf) format("truetype");
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/PlayfairDisplay-Italic.ttf) format("truetype");
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/PlayfairDisplay-MediumItalic.ttf) format("truetype");
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/PlayfairDisplay-Bold.ttf) format("truetype");
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/PlayfairDisplay-BoldItalic.ttf) format("truetype");
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ROOT VARIABLES */
+:root {
+  /* COLORS */
+  --color-beige: #fbf5eb;
+  --color-black: #1a1a1a;
+  --color-faded: #1a1a1a80;
+  --color-red: #c33f39;
+  --color-tan: #ccc2b2;
+
+  /* FONTS */
+  --font-sans: "Inter", Arial, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  /* PADDING SIZES  */
+  --padding-small: 24px;
+  --padding-medium: 36px;
+  --padding-large: 48px;
+
+  /* BORDER RADIUS */
+  --border-radius: 25px;
+
+  /* GAP SIZES FOR THE GRID LAYOUT */
+  --grid-gap-small: 8px;
+  --grid-gap-medium: 10px;
+  --grid-gap-large: 12px;
+}
+
+/* TAG STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-black);
+
+  font-family: var(--font-sans);
+  color: var(--color-black);
+  font-weight: 400;
+}
+
+/* PLACEHOLDER */
+main {
+  padding: var(--padding-small);
+}
+
+header,
+footer,
+main {
+  background-color: var(--color-beige);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-black);
+  /* HR MARGIN FOLLOWS PADDING OF WEBSITE CONTENTS */
+  margin: var(--padding-small) 0;
+}
+
+/* BREAKPOINT CLASSES */
+.hidden-upto-640,
+.hidden-upto-768,
+.hidden-upto-1024,
+.hidden-upto-1280,
+.hidden-upto-1440 {
+  display: none;
+}
+
+/* REUSABLE TAGS AND CLASSES */
+.logo-sans {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+.logo-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 28px;
+
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.heading-sans {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.heading-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.sidebar-sans {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.sidebar-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.text-light {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+
+  color: var(--color-faded);
+}
+
+/* H3 AND P TAGS STAY CONSISTENT ACROSS PAGES */
+h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 24px;
+
+  text-align: left;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 18px;
+
+  text-align: left;
+}
+
+/* 
+ * WEBSITE FOLLOWS A CONSISTENT GRID LAYOUT
+ *
+ * 3 COLUMNS UPTO 640px, GRID GAP SMALL
+ * 4 COLUMNS UPTO 768px, GRID GAP MEDIUM
+ * 8 COLUMNS UPTO 1280px, GRID GAP LARGE
+ * 12 COLUMNS 1280px ABOVE
+ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap-small);
+
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* BUTTON STYLING */
+.btn {
+  display: inline-flex;
+  align-items: center;
+
+  height: 50px;
+  width: 200px;
+
+  border-radius: 50px;
+  padding: 6px;
+  gap: 2px;
+
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 40px;
+}
+
+.btn span {
+  flex: 1;
+  text-align: center;
+}
+
+/* BUTTON COLORS */
+.btn-red {
+  background-color: var(--color-red);
+  color: var(--color-beige);
+}
+
+.btn-tan {
+  background-color: var(--color-tan);
+  color: var(--color-black);
+}
+
+.btn-black {
+  background-color: var(--color-black);
+  color: var(--color-tan);
+}
+
+/* HEADER STYLING */
+header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 13px var(--padding-small);
+  border-bottom: 1px solid var(--color-black);
+}
+
+header a {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SIDEBAR STYLING */
+.rail-close-menu {
+  display: none;
+}
+
+.sidebar {
+  width: 100%;
+  height: 100vh;
+  max-width: 600px;
+
+  overflow: hidden;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--padding-small);
+  padding-top: 13px;
+
+  border-left: 1px solid var(--color-black);
+  background-color: var(--color-beige);
+
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 13px;
+}
+
+.sidebar-header-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content hr {
+  margin: 0;
+}
+
+.nav-item {
+  padding: 10px 0;
+  transition: 0.3s ease;
+}
+
+.nav-item.nav-dropdown {
+  padding: 0;
+}
+
+.nav-item span:first-child {
+  padding-left: 5px;
+}
+
+a.nav-item:hover,
+.nav-dropdown-btn:hover {
+  background-color: var(--color-tan);
+}
+
+/* DROPDOWN FOR MY FEATURED WORKS */
+.nav-dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+  padding: 10px 0;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.dropdown-arrow {
+  display: inline;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s ease;
+  opacity: 0;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* PROJECT LINKS INSIDE DROPDOWN */
+.nav-dropdown-content a {
+  font-weight: 700;
+  font-size: 18px;
+
+  padding-left: 12px;
+
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.nav-dropdown-content a:hover {
+  opacity: 0.7;
+}
+
+.nav-dropdown-content a:last-child {
+  padding-bottom: 10px;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* CONTACT ME SECTION STYLING */
+/* contact me section */
+.contact-me-shapes img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-me-shape-4 {
+  display: flex;
+  justify-content: center;
+
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.contact-me-shape-4 img {
+  max-width: 260px;
+}
+
+.contact-me-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  padding: var(--padding-small) 0;
+}
+
+.contact-me-sans {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 28px;
+
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.contact-me-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 72px;
+
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.contact-me-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-me-text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.download-cv {
+  display: flex;
+  justify-content: center;
+}
+
+/* FOOTER STYLING */
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  padding: var(--padding-small);
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+
+  text-align: right;
+  margin-left: auto;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 390px) {
+}
+
+@media (min-width: 640px) {
+  /* HIDDEN CLASSES */
+  .hidden-upto-640 {
+    display: block;
+  }
+
+  .hidden-at-640 {
+    display: none;
+  }
+
+  /* GRID IS 4 COLUMNS AT 640 */
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap-small);
+    max-width: 540px;
+  }
+
+  /* INCREASE FONT SIZES */
+  /* GENERAL TAGS */
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  /* CONTACTS SECTION */
+  .contact-me-shape-3 {
+    grid-column: 4;
+  }
+
+  .contact-me-sans {
+    font-size: 36px;
+  }
+
+  .contact-me-serif {
+    font-size: 96px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* HIDDEN CLASSES */
+  .hidden-upto-768 {
+    display: block;
+  }
+
+  .hidden-at-768 {
+    display: none;
+  }
+
+  /* GRID IS 8 COLUMNS AT 768 */
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--grid-gap-medium);
+    max-width: 1820px;
+  }
+
+  /* INCREASE FONT SIZES */
+  /* CONTACTS SECTION */
+  .download-cv-copy {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+
+  .download-cv-copy img {
+    width: 40px;
+  }
+
+  .contact-me-shape-1 {
+    grid-column: 7;
+  }
+
+  .contact-me-shape-2 {
+    grid-column: 8;
+  }
+
+  .contact-me-shape-3 {
+    grid-column: 8;
+    grid-row: 2;
+  }
+
+  .contact-me-shape-4 {
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .contact-me-sans {
+    font-size: 42px;
+  }
+
+  .contact-me-serif {
+    font-size: 108px;
+  }
+
+  .download-cv {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* HIDDEN CLASSES */
+  .hidden-upto-1024 {
+    display: block;
+  }
+
+  .hidden-at-1024 {
+    display: none;
+  }
+
+  /* REMOVE STICKY FROM HEADER */
+  header {
+    position: static;
+    align-items: flex-start;
+
+    border-bottom: none;
+    border-top-right-radius: var(--border-radius);
+    padding: var(--padding-small);
+  }
+
+  /* INCREASE FONT SIZES */
+  .logo-sans {
+    font-size: 24px;
+  }
+
+  .logo-serif {
+    font-size: 36px;
+  }
+
+  .sidebar-sans {
+    font-size: 24px;
+  }
+
+  .sidebar-serif {
+    font-size: 28px;
+  }
+
+  .nav-dropdown-content a {
+    font-size: 20px;
+  }
+
+  /* CONTACTS SECTION */
+  .contact-me-title {
+    padding: var(--padding-medium) 0;
+  }
+
+  /* PADDING BECOMES MEDIUM AT 1024 */
+  header,
+  footer,
+  main {
+    padding: var(--padding-medium);
+  }
+
+  hr {
+    margin: var(--padding-medium) 0;
+  }
+
+  /* INCREASE BUTTON SIZE  */
+  .btn {
+    width: 240px;
+    height: 60px;
+
+    padding: 8px;
+    font-size: 24px;
+  }
+
+  .btn img {
+    width: 45px;
+  }
+
+  /* NAVIGATION BAR AND SOCIAL LINKS APPEARS AT 1024  */
+  .social-links,
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-medium);
+  }
+
+  .social-links a,
+  header nav a {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 18px;
+
+    letter-spacing: -1px;
+    color: var(--color-faded);
+    transition: 0.3s ease;
+  }
+
+  .social-links a:hover,
+  header nav a.active,
+  header nav a:hover {
+    color: var(--color-black);
+  }
+
+  /* ADD SIDEBAR RAIL AT 1024  */
+  header,
+  footer,
+  main {
+    /* ADD MARGIN TO GIVE SPACE TO RAIL */
+    margin-right: 75px;
+  }
+
+  .sidebar {
+    right: 75px;
+    z-index: 100;
+
+    padding: var(--padding-medium);
+  }
+
+  .sidebar-header {
+    padding-bottom: var(--padding-medium);
+  }
+
+  .sidebar-rail {
+    width: 75px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: var(--color-beige);
+    border-left: 1px solid var(--color-black);
+
+    padding: 12px;
+    gap: 20px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    z-index: 101;
+  }
+
+  /* SIX IN THE MORNING... LABEL */
+  .rail-label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    flex: 1;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .rail-label span {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 22px;
+
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+  }
+
+  .sidebar-rail:hover {
+    background-color: var(--color-tan);
+  }
+
+  .sidebar.open ~ .sidebar-rail .rail-open-menu {
+    display: none;
+  }
+
+  .sidebar.open ~ .sidebar-rail .rail-close-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* HIDDEN CLASSES */
+  .hidden-upto-1280 {
+    display: block;
+  }
+
+  .hidden-at-1280 {
+    display: none;
+  }
+
+  /* GRID IS 12 COLUMNS AT 1280 AND ABOVE */
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap-large);
+  }
+
+  /* INCREASE FONT SIZES */
+  /* CONTACTS SECTION */
+  .contact-me-shape-1 {
+    grid-column: 11;
+  }
+
+  .contact-me-shape-2 {
+    grid-column: 12;
+  }
+
+  .contact-me-shape-3 {
+    grid-column: 12;
+    grid-row: 2;
+  }
+
+  .contact-me-shape-4 {
+    grid-column: 6 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .contact-me-sans {
+    font-size: 48px;
+  }
+
+  .contact-me-serif {
+    font-size: 132px;
+  }
+
+  .contact-me-title {
+    padding: var(--padding-large) 0;
+  }
+
+  .contact-me-text {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  /* HIDDEN CLASSES */
+  .hidden-upto-1440 {
+    display: block;
+  }
+
+  .hidden-at-1440 {
+    display: none;
+  }
+
+  /* PADDING BECOMES LARGE AT 1440 */
+  header,
+  footer,
+  main {
+    padding: var(--padding-large);
+  }
+
+  .social-links,
+  .header-nav {
+    gap: var(--padding-large);
+  }
+
+  /* INCREASE BUTTON SIZE  */
+  .btn {
+    width: 275px;
+    height: 75px;
+
+    padding: 8px;
+    font-size: 28px;
+  }
+
+  .btn img {
+    width: 58px;
+  }
+
+  /* INCREASE FONT SIZES */
+  /* GENERAL TAGS */
+  h3 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  /* GENERAL CLASSES */
+  .logo-sans {
+    font-size: 28px;
+  }
+
+  .logo-serif {
+    font-size: 42px;
+  }
+
+  .sidebar-sans {
+    font-size: 28px;
+  }
+
+  .sidebar-serif {
+    font-size: 32px;
+  }
+
+  .nav-dropdown-content a {
+    font-size: 24px;
+  }
+
+  .social-links a,
+  header nav a {
+    font-size: 20px;
+  }
+
+  .text-light {
+    font-size: 18px;
+  }
+
+  /* CONTACTS SECTION */
+  .contact-me-sans {
+    font-size: 64px;
+  }
+
+  .contact-me-serif {
+    font-size: 160px;
+  }
+
+  /* SIDEBAR RAIL BECOMES 100PX AT 1440  */
+  header,
+  footer,
+  main {
+    /* ADD MARGIN TO GIVE SPACE TO RAIL */
+    margin-right: 100px;
+  }
+
+  .sidebar {
+    right: 100px;
+    padding: var(--padding-large);
+  }
+
+  .sidebar-header {
+    padding-bottom: var(--padding-large);
+  }
+
+  .sidebar-rail {
+    width: 100px;
+    padding: 26px;
+  }
+
+  .rail-label span {
+    font-size: 24px;
+  }
+}
