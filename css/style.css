@@ -72,6 +72,31 @@
   font-display: swap;
 }
 
+/* PROJECT SPECIFIC FONTS */
+@font-face {
+  src: url(../ttf/Poppins-Regular.ttf) format("truetype");
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/BaskervvilleSC-Medium.ttf) format("truetype");
+  font-family: "Baskerville SC";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../ttf/EBGaramond-Regular.ttf) format("truetype");
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* ROOT VARIABLES */
 :root {
   /* COLORS */
@@ -84,6 +109,11 @@
   /* FONTS */
   --font-sans: "Inter", Arial, sans-serif;
   --font-serif: "Playfair Display", Georgia, serif;
+
+  /* PROJECT SPECIFIC FONTS */
+  --font-poppins: "Poppins", Arial, sans-serif;
+  --font-baskerville: "Baskerville SC", Georgia, serif;
+  --font-garamond: "EB Garamond", "Times New Roman", serif;
 
   /* PADDING SIZES  */
   --padding-small: 24px;
@@ -123,6 +153,10 @@ header,
 footer,
 main {
   background-color: var(--color-beige);
+}
+
+header {
+  z-index: 199;
 }
 
 a {
@@ -174,6 +208,10 @@ hr {
 
   line-height: 1;
   letter-spacing: -1px;
+}
+
+.heading {
+  text-align: center;
 }
 
 .heading-sans {
@@ -251,7 +289,7 @@ p {
   align-items: center;
 
   height: 50px;
-  width: 200px;
+  min-width: 200px;
 
   border-radius: 50px;
   padding: 6px;
@@ -262,6 +300,9 @@ p {
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
+
+  box-shadow: 0 0 0 0px transparent;
+  transition: box-shadow 0.3s ease;
 }
 
 .btn img {
@@ -287,6 +328,36 @@ p {
 .btn-black {
   background-color: var(--color-black);
   color: var(--color-tan);
+}
+
+.btn-white {
+  background-color: var(--color-beige);
+  color: var(--color-red);
+}
+
+/* BUTTON HOVER STATES */
+.btn-red:hover {
+  box-shadow: 0 0 0 2px var(--color-tan);
+}
+
+.btn-tan:hover {
+  box-shadow: 0 0 0 2px var(--color-black);
+}
+
+.btn-black:hover {
+  box-shadow: 0 0 0 2px var(--color-tan);
+}
+
+.btn-white:hover {
+  box-shadow: 0 0 0 2px var(--color-tan);
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
+.visit-page-btn {
+  display: none;
 }
 
 /* HEADER STYLING */
@@ -322,11 +393,13 @@ header a {
 
   top: 0;
   right: 0;
+  z-index: 200;
 
   display: flex;
   flex-direction: column;
 
   padding: var(--padding-small);
+  /* 13PX MATCHES HEADER VERTICAL PADDING FOR VISUAL ALIGNMENT */
   padding-top: 13px;
 
   border-left: 1px solid var(--color-black);
@@ -421,12 +494,12 @@ a.nav-item:hover,
 
   transition:
     max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.5s ease;
+    opacity 0.8s ease;
   opacity: 0;
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
-  max-height: 300px;
+  max-height: 200px;
   opacity: 1;
 }
 
@@ -456,7 +529,7 @@ a.nav-item:hover,
 }
 
 /* CONTACT ME SECTION STYLING */
-/* contact me section */
+/* CONTACT ME SECTION */
 .contact-me-shapes img {
   width: 100%;
   height: 100%;
@@ -541,9 +614,6 @@ footer {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 390px) {
-}
-
 @media (min-width: 640px) {
   /* HIDDEN CLASSES */
   .hidden-upto-640 {
@@ -569,6 +639,15 @@ footer {
 
   p {
     font-size: 22px;
+  }
+
+  /* GENERAL CLASSES */
+  .heading-sans {
+    font-size: 30px;
+  }
+
+  .heading-serif {
+    font-size: 32px;
   }
 
   /* CONTACTS SECTION */
@@ -602,7 +681,6 @@ footer {
     max-width: 1820px;
   }
 
-  /* INCREASE FONT SIZES */
   /* CONTACTS SECTION */
   .download-cv-copy {
     grid-column: 1 / span 3;
@@ -697,8 +775,9 @@ footer {
     padding: var(--padding-medium);
   }
 
-  hr {
-    margin: var(--padding-medium) 0;
+  header {
+    padding-bottom: 15px;
+    z-index: 199;
   }
 
   /* INCREASE BUTTON SIZE  */
@@ -749,8 +828,6 @@ footer {
 
   .sidebar {
     right: 75px;
-    z-index: 100;
-
     padding: var(--padding-medium);
   }
 
@@ -779,7 +856,7 @@ footer {
 
     cursor: pointer;
     transition: 0.2s ease;
-    z-index: 101;
+    z-index: 201;
   }
 
   /* SIX IN THE MORNING... LABEL */
@@ -833,6 +910,14 @@ footer {
   }
 
   /* INCREASE FONT SIZES */
+  .heading-sans {
+    font-size: 32px;
+  }
+
+  .heading-serif {
+    font-size: 36px;
+  }
+
   /* CONTACTS SECTION */
   .contact-me-shape-1 {
     grid-column: 11;
@@ -886,6 +971,10 @@ footer {
     padding: var(--padding-large);
   }
 
+  header {
+    padding-bottom: 20px;
+  }
+
   .social-links,
   .header-nav {
     gap: var(--padding-large);
@@ -904,6 +993,11 @@ footer {
     width: 58px;
   }
 
+  .btn-white {
+    width: 200px;
+    font-size: 24px;
+  }
+
   /* INCREASE FONT SIZES */
   /* GENERAL TAGS */
   h3 {
@@ -920,7 +1014,15 @@ footer {
   }
 
   .logo-serif {
-    font-size: 42px;
+    font-size: 36px;
+  }
+
+  .heading-sans {
+    font-size: 38px;
+  }
+
+  .heading-serif {
+    font-size: 48px;
   }
 
   .sidebar-sans {
@@ -977,5 +1079,11 @@ footer {
 
   .rail-label span {
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1750px) {
+  .visit-page-btn {
+    display: flex;
   }
 }

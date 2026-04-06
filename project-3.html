@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <title>Dwyane Sido | Love From Below</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <span class="logo-sans">Portfolio of</span>
+        <span class="logo-serif">Dwyane Sido</span>
+      </a>
+      <img
+        src="shapes/menu.svg"
+        alt="open navigation menu"
+        class="menu-btn hidden-at-1024"
+      />
+      <nav class="header-nav hidden-upto-1024">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="works.html" class="active">WORKS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </header>
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-header-logo">
+          <span class="logo-sans">Portfolio of</span>
+          <span class="logo-serif">Dwyane Sido</span>
+        </div>
+        <img
+          src="shapes/x.svg"
+          alt="close navigation menu"
+          class="menu-btn hidden-at-1024"
+        />
+      </div>
+      <div class="sidebar-content">
+        <hr />
+        <a href="index.html" class="nav-item sidebar-serif"
+          ><span>Home</span></a
+        >
+        <hr />
+        <a href="about.html" class="nav-item">
+          <span class="sidebar-sans">What is it </span>
+          <span class="sidebar-serif">About Me?</span>
+        </a>
+        <hr />
+
+        <!-- HOVER DROPDOWN FOR MY FEATURED WORKS -->
+        <div class="nav-item nav-dropdown">
+          <button class="nav-dropdown-btn">
+            <div class="dropdown-btn-content">
+              <span class="sidebar-sans">My Featured </span>
+              <span class="sidebar-serif">Works</span>
+            </div>
+            <img
+              src="shapes/arrow-down.svg"
+              alt="arrow down"
+              class="dropdown-arrow"
+            />
+          </button>
+          <div class="nav-dropdown-content">
+            <hr class="nav-hr" />
+            <a href="works.html">View All Projects</a>
+            <a href="project-1.html">Kawaii Count</a>
+            <a href="project-2.html">The Jose Rizal Website</a>
+            <a href="project-3.html">Love From Below</a>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- HOVER DROPDOWN FOR SOCIAL LINKS -->
+        <div class="nav-item nav-dropdown">
+          <button class="nav-dropdown-btn">
+            <div class="dropdown-btn-content">
+              <span class="sidebar-sans">My Social </span>
+              <span class="sidebar-serif">Links</span>
+            </div>
+            <img
+              src="shapes/arrow-down.svg"
+              alt="arrow down"
+              class="dropdown-arrow"
+            />
+          </button>
+          <div class="nav-dropdown-content">
+            <hr class="nav-hr" />
+            <a
+              href="https://www.facebook.com/dwyane.sido.smh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+            <a
+              href="https://x.com/5mhmyhead"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Twitter / X</a
+            >
+            <a
+              href="https://github.com/5mhmyhead"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://www.instagram.com/saludover/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </div>
+        </div>
+
+        <hr />
+        <a href="contact.html" class="nav-item">
+          <span class="sidebar-sans">Let's </span>
+          <span class="sidebar-serif">Get in Touch</span>
+        </a>
+        <hr />
+      </div>
+      <div class="sidebar-footer">
+        <span class="text-light">© Dwyane Sido, All Rights Reserved</span>
+        <span class="text-light local-time">Local Time: 12:00:00 pm, PST</span>
+      </div>
+    </div>
+
+    <!-- SIDEBAR RAIL THAT APPEARS ON THE SIDE AT 1024 -->
+    <div class="sidebar-rail menu-btn hidden-upto-1024">
+      <img
+        src="shapes/menu.svg"
+        alt="open navigation menu"
+        class="rail-open-menu"
+      />
+      <img
+        src="shapes/x.svg"
+        alt="close navigation menu"
+        class="rail-close-menu"
+      />
+      <div class="rail-label">
+        <span>Six in the Morning, Nine in the Afternoon</span>
+      </div>
+    </div>
+
+    <main>
+      <!-- PROJECT 3 IS LOVE FROM BELOW -->
+      <section class="project-section">
+        <div class="project-title">
+          <h1>Love From Below</h1>
+        </div>
+        <h2 class="heading">
+          <span class="heading-serif">Java Game Application / </span>
+          <span class="heading-sans">Game Development</span>
+          <span class="heading-serif"> / Personal Project</span>
+        </h2>
+        <hr />
+        <div class="grid project-shapes hidden-upto-768">
+          <div class="project-shape-1">
+            <img src="shapes/tan-four.svg" alt="tan shape" />
+          </div>
+          <div class="project-shape-2">
+            <img src="shapes/tan-four.svg" alt="tan shape" />
+          </div>
+          <div class="project-shape-3">
+            <img src="shapes/red-three.svg" alt="red shape" />
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-images">
+            <div class="project-image-wrapper">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="img/project-3-img-1-big.png"
+                />
+                <img
+                  src="img/project-3-img-1.png"
+                  alt="image of kawaii count"
+                />
+              </picture>
+            </div>
+            <div class="project-image-wrapper">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="img/project-3-img-2-big.png"
+                />
+                <img
+                  src="img/project-3-img-2.png"
+                  alt="image of kawaii count"
+                />
+              </picture>
+            </div>
+            <div class="project-image-wrapper">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="img/project-3-img-3-big.png"
+                />
+                <img
+                  src="img/project-3-img-3.png"
+                  alt="image of kawaii count"
+                />
+              </picture>
+            </div>
+            <div class="project-image-wrapper">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="img/project-3-img-4-big.png"
+                />
+                <img
+                  src="img/project-3-img-4.png"
+                  alt="image of kawaii count"
+                />
+              </picture>
+            </div>
+            <div class="project-image-wrapper">
+              <picture>
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="img/project-3-img-5-big.png"
+                />
+                <img
+                  src="img/project-3-img-5.png"
+                  alt="image of kawaii count"
+                />
+              </picture>
+            </div>
+          </div>
+          <div class="project-description">
+            <div class="project-overview">
+              <h3>Project Overview</h3>
+              <p>
+                <strong>Love From Below </strong> is a little 2D Game made in
+                Java to learn more about the Swing functionality and game
+                development in general. This project was built along with
+                multiple YouTube tutorials that involves using built in Java
+                functionality and without the need for external libraries.
+              </p>
+              <p>
+                Originally created for my Java finals project, I decided to port
+                this project into Godot since I felt that this project wouldn't
+                reach its full potential without a dedicated game engine. This
+                project is currently put on hold because of other more important
+                projects. I’m hoping that in time, this project can be finished
+                into a fully playable game.
+              </p>
+            </div>
+            <div class="project-design">
+              <h3>Game Palette</h3>
+              <div class="project-design-content">
+                <div class="grid project-colors">
+                  <div class="lfb-color-1"></div>
+                  <div class="lfb-color-2"></div>
+                  <div class="lfb-color-3"></div>
+                  <div class="lfb-color-4"></div>
+                </div>
+                <div class="grid project-colors">
+                  <div class="lfb-color-5"></div>
+                  <div class="lfb-color-6"></div>
+                  <div class="lfb-color-7"></div>
+                  <div class="lfb-color-8"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-buttons" style="padding-top: 30px">
+              <div class="github-btn">
+                <a
+                  href="https://github.com/5mhmyhead/Love-From-Below"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-red"
+                >
+                  <span>GitHub Link</span>
+                  <img src="shapes/btn-red-arrow.svg" alt="arrow" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <!-- CONTACT ME SECTION IS ALWAYS PRESENT AT THE BOTTOM OF EACH PAGE -->
+      <section class="contact-me-section">
+        <div class="grid contact-me-shapes">
+          <div class="download-cv-copy hidden-upto-768">
+            <a href="#" class="btn btn-tan">
+              <span>Download CV</span>
+              <img src="shapes/btn-tan-arrow.svg" alt="arrow" />
+            </a>
+          </div>
+          <div class="contact-me-shape-1">
+            <img src="shapes/tan-two.svg" alt="tan shape" />
+          </div>
+          <div class="contact-me-shape-2">
+            <img src="shapes/red-two.svg" alt="red shape" />
+          </div>
+          <div class="contact-me-shape-3">
+            <img src="shapes/black-two.svg" alt="black shape" />
+          </div>
+          <div class="contact-me-shape-4">
+            <img src="shapes/star.svg" alt="star" />
+          </div>
+        </div>
+        <h2 class="contact-me-title">
+          <span class="contact-me-sans">Feel like collaborating? </span>
+          <span class="contact-me-serif">Let’s Get in Touch</span>
+        </h2>
+        <div class="download-cv">
+          <a href="#" class="btn btn-tan">
+            <span>Download CV</span>
+            <img src="shapes/btn-tan-arrow.svg" alt="arrow" />
+          </a>
+        </div>
+        <hr />
+        <div class="contact-me-text">
+          <div class="contact-me-text-section">
+            <h3>Contact Me</h3>
+            <p>
+              For any business inquiries, you can message me through Facebook or
+              email me at apostrophe0612@gmail.com.
+            </p>
+          </div>
+          <div class="contact-me-text-section">
+            <h3>Bio</h3>
+            <p>
+              20 y.o. from the Philippines. Second year of Software Engineering
+              at iACADEMY Cebu. Not much time for movies nowadays.
+            </p>
+          </div>
+          <div class="contact-me-text-section">
+            <h3>Art Commissions</h3>
+            <p>
+              I also do art commissions. However, they’re closed indefinitely so
+              I can focus on my degree. I usually do portrait drawings, but I
+              can also do half/full body drawings as well. For more information,
+              you can check out my Twitter page.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links hidden-upto-1024">
+        <a
+          href="https://www.facebook.com/dwyane.sido.smh/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >FACEBOOK</a
+        >
+        <a
+          href="https://x.com/5mhmyhead"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TWITTER / X</a
+        >
+        <a
+          href="https://github.com/5mhmyhead"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GITHUB</a
+        >
+        <a
+          href="https://www.instagram.com/saludover/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >INSTAGRAM</a
+        >
+      </div>
+      <div class="copyright">
+        <span class="text-light">© Dwyane Sido, All Rights Reserved</span>
+        <span class="text-light local-time">Local Time: 12:00:00 pm, PST</span>
+      </div>
+    </footer>
+
+    <!-- SCRIPT THAT CONTAINS SIDEBAR FUNCTIONALITY AND LOCAL TIME -->
+    <script src="script.js"></script>
+  </body>
+</html>

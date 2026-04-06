@@ -1,0 +1,478 @@
+:root {
+  /* PROJECT SPECIFIC COLORS */
+  /* KAWAII COUNT */
+  --kawaii-color-1: #693c5b;
+  --kawaii-color-2: #e76d8a;
+  --kawaii-color-3: #ef8fa4;
+  --kawaii-color-4: #f5a1a1;
+  --kawaii-color-5: #ffd6b7;
+  --kawaii-color-6: #f8e9e5;
+
+  /* JOSE RIZAL WEBSITE */
+  --rizal-color-1: #c5b68e;
+  --rizal-color-2: #d5caae;
+  --rizal-color-3: #fbf1d8;
+  --rizal-color-4: #2a2a2a;
+
+  /* LOVE FROM BELOW */
+  --lfb-color-1: #306850;
+  --lfb-color-2: #86c06c;
+  --lfb-color-3: #e0f8cf;
+  --lfb-color-4: #071821;
+
+  --lfb-color-5: #84739c;
+  --lfb-color-6: #f7b58c;
+  --lfb-color-7: #ffefff;
+  --lfb-color-8: #181010;
+}
+
+/* CSS FILE FOR PROJECTS */
+.project-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 36px;
+
+  text-align: center;
+  line-height: 0.9;
+  letter-spacing: -3px;
+
+  padding-bottom: 24px;
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap-large);
+  align-items: stretch;
+
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: var(--padding-small) 0;
+}
+
+.project-shapes {
+  display: none;
+}
+
+/* PROJECT IMAGES HOVER  */
+.project-image-wrapper {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  border-top-left-radius: 0;
+
+  flex-shrink: 0;
+}
+
+.project-images img {
+  border-radius: 0;
+  width: 100%;
+  display: block;
+
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.project-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* PROJECT COLORS GRID */
+.project-colors {
+  padding: 12px 0;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.project-colors > * {
+  width: 100%;
+  height: 100%;
+
+  border-top-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+/* KAWAII COUNT */
+.kawaii-color-1 {
+  aspect-ratio: 1 / 1;
+  background-color: var(--kawaii-color-1);
+}
+
+.kawaii-color-2 {
+  background-color: var(--kawaii-color-2);
+}
+
+.kawaii-color-3 {
+  background-color: var(--kawaii-color-3);
+}
+
+.kawaii-color-4 {
+  background-color: var(--kawaii-color-4);
+}
+
+.kawaii-color-5 {
+  background-color: var(--kawaii-color-5);
+}
+
+.kawaii-color-6 {
+  background-color: var(--kawaii-color-6);
+}
+
+/* RIZAL WEBSITE */
+.rizal-color-1 {
+  aspect-ratio: 1 / 1;
+  background-color: var(--rizal-color-1);
+}
+
+.rizal-color-2 {
+  background-color: var(--rizal-color-2);
+}
+
+.rizal-color-3 {
+  background-color: var(--rizal-color-3);
+
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.rizal-color-4 {
+  background-color: var(--rizal-color-4);
+
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+/* LOVE FROM BELOW */
+.lfb-color-1 {
+  background-color: var(--lfb-color-1);
+}
+
+.lfb-color-2 {
+  background-color: var(--lfb-color-2);
+}
+
+.lfb-color-3 {
+  background-color: var(--lfb-color-3);
+
+  aspect-ratio: 1 / 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.lfb-color-4 {
+  background-color: var(--lfb-color-4);
+
+  aspect-ratio: 2 / 1;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.lfb-color-5 {
+  background-color: var(--lfb-color-5);
+}
+
+.lfb-color-6 {
+  background-color: var(--lfb-color-6);
+}
+
+.lfb-color-7 {
+  background-color: var(--lfb-color-7);
+
+  aspect-ratio: 1 / 2;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.lfb-color-8 {
+  background-color: var(--lfb-color-8);
+
+  aspect-ratio: 2 / 1;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+/* PROJECT TYPOGRAPHY  */
+.project-typography {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  text-align: center;
+}
+
+.typography-showcase {
+  font-size: 96px;
+
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.typography-text {
+  font-size: 24px;
+
+  line-height: 0.9;
+  letter-spacing: -1px;
+}
+
+/* SPECIFIC FONTS */
+.font-playfair {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-baskerville {
+  font-family: var(--font-baskerville);
+  font-weight: 500;
+}
+
+.font-garamond {
+  font-family: var(--font-garamond);
+}
+
+/* PROJECT BUTTONS */
+.project-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding-top: 48px;
+}
+
+.documentation-btn {
+  align-self: flex-end;
+}
+
+/* CUSTOM SCROLLBAR STYLING  */
+.project-images::-webkit-scrollbar {
+  width: 4px;
+}
+
+.project-images::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-images::-webkit-scrollbar-thumb {
+  background-color: var(--color-tan);
+  border-radius: 20px;
+}
+
+.project-images {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-tan) transparent;
+}
+
+@media (min-width: 640px) {
+  /* INCREASE FONT SIZES */
+  .project-title {
+    font-size: 48px;
+  }
+
+  .typography-showcase {
+    font-size: 120px;
+  }
+
+  .typography-text {
+    font-size: 32px;
+  }
+
+  .project-images {
+    max-width: 540px;
+  }
+
+  /* STRUCTURE BRAND COLOR GRID */
+  .project-colors {
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  /* KAWAII COUNT */
+  .kawaii-color-3 {
+    aspect-ratio: 2 / 1;
+    grid-column: 3 / span 2;
+  }
+
+  .kawaii-color-6 {
+    aspect-ratio: 2 / 1;
+    grid-column: 3 / span 2;
+    grid-row-start: 2;
+  }
+
+  /* RIZAL WEBSITE */
+  .rizal-color-3,
+  .lfb-color-3,
+  .lfb-color-7 {
+    aspect-ratio: 1 / 1;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+  }
+
+  .rizal-color-4,
+  .lfb-color-4,
+  .lfb-color-8 {
+    aspect-ratio: 1 / 1;
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--grid-gap-medium);
+    align-items: start;
+  }
+
+  .project-images {
+    order: 1;
+    padding-right: 8px;
+  }
+
+  .project-overview {
+    padding-top: 0;
+  }
+
+  /* DISPLAY SHAPES ON TOP OF GRID */
+  .project-shapes {
+    display: grid;
+    padding-bottom: var(--grid-gap-medium);
+  }
+
+  .project-shape-2 {
+    grid-column-start: 7;
+  }
+
+  .project-colors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap-medium);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* INCREASE FONT SIZES */
+  .project-title {
+    font-size: 64px;
+  }
+
+  .project-images {
+    gap: 18px;
+  }
+
+  .project-content,
+  .project-colors {
+    gap: var(--grid-gap-large);
+  }
+
+  .project-images {
+    width: 100%;
+    max-width: 1820px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .project-title {
+    font-size: 80px;
+  }
+
+  .project-shape-2 {
+    grid-column-start: 11;
+  }
+
+  .project-design-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    align-items: center;
+  }
+
+  .project-images {
+    gap: 24px;
+  }
+
+  .project-colors {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .typography-showcase {
+    font-size: 96px;
+  }
+
+  .typography-text {
+    font-size: 28px;
+  }
+
+  /* STRUCTURE BRAND COLOR GRID */
+  .project-colors {
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  /* KAWAII COUNT */
+  .kawaii-color-3 {
+    aspect-ratio: 1 / 1;
+    grid-column: 3;
+  }
+
+  .kawaii-color-6 {
+    aspect-ratio: 1 / 1;
+    grid-column: 3;
+    grid-row-start: 2;
+  }
+
+  /* RIZAL WEBSITE */
+  .rizal-color-3,
+  .lfb-color-3,
+  .lfb-color-7 {
+    aspect-ratio: 1 / 2;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .rizal-color-4,
+  .lfb-color-4,
+  .lfb-color-8 {
+    aspect-ratio: 2 / 1;
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+
+  /* CHANGE BUTTON LAYOUT */
+  .project-buttons {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* MAKE PROJECT DESCRIPTION STICKY WHEN SCROLLING THROUGH PROJECT IMAGES */
+  .project-content {
+    align-items: start;
+  }
+
+  .project-description {
+    position: sticky;
+    top: var(--padding-medium);
+    align-self: start;
+  }
+}
+
+@media (min-width: 1720px) {
+  .typography-showcase {
+    font-size: 128px;
+  }
+
+  .typography-text {
+    font-size: 32px;
+  }
+}
