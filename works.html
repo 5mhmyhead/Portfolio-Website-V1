@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Portfolio of Dwyane Sido</title>
+    <link rel="stylesheet" href="css/works.css" />
+    <title>Dwyane Sido | Works</title>
   </head>
   <body>
     <header>
@@ -19,9 +19,9 @@
         class="menu-btn hidden-at-1024"
       />
       <nav class="header-nav hidden-upto-1024">
-        <a href="index.html" class="active">HOME</a>
+        <a href="index.html">HOME</a>
         <a href="about.html">ABOUT</a>
-        <a href="works.html">WORKS</a>
+        <a href="works.html" class="active">WORKS</a>
         <a href="contact.html">CONTACT</a>
       </nav>
     </header>
@@ -149,202 +149,75 @@
     </div>
 
     <main>
-      <!-- HERO SECTION -->
-      <section class="hero-section">
-        <h1 class="hero-title">
-          <span class="hero-sans">Hello, I'm </span>
-          <span class="hero-serif">Dwyane. </span>
-          <img src="shapes/star.svg" alt="star" class="hero-star" />
+      <!-- WORKS SECTION -->
+      <div class="works-section">
+        <h1 class="works-title">
+          <span class="works-sans">My Featured </span>
+          <span class="works-serif">Works</span>
         </h1>
         <h2 class="heading">
-          <span class="heading-serif">Visual Artist / </span>
-          <span class="heading-sans">Software Engineer</span>
-          <span class="heading-serif"> / Graphics Designer</span>
+          <span class="heading-sans">Check out some of my </span>
+          <span class="heading-serif">featured projects below.</span>
         </h2>
-
-        <div class="grid hero-images">
-          <div class="hero-images-1">
-            <img src="img/hero-image-main.png" alt="hero image" />
+        <hr />
+        <div class="grid project-shapes hidden-upto-768">
+          <div class="project-shape-1">
+            <img src="shapes/tan-four.svg" alt="tan shape" />
           </div>
-          <div class="hero-images-2">
-            <img src="img/hero-image-small-two.png" alt="hero image" />
+          <div class="project-shape-2">
+            <img src="shapes/tan-four.svg" alt="tan shape" />
           </div>
-          <div class="hero-images-3">
-            <img src="img/hero-image-small-one.png" alt="hero image" />
+          <div class="project-shape-3">
+            <img src="shapes/red-three.svg" alt="red shape" />
           </div>
-
-          <!-- RED SQUARE -->
-          <div class="hero-images-4"></div>
-          <!-- TAN SQUARE -->
-          <div class="hero-images-5"></div>
         </div>
-
-        <div class="hero-text">
-          <h3>Welcome to my website.</h3>
-          <p>
-            I’m currently a 20 y.o. college student learning the wonderfully
-            volatile life of a software engineer. Aspiring to become a
-            professional in the sphere of computer technology, I’m hoping to
-            earn a sizeable enough living to laze around all day without regret.
-            I hope you enjoy your time here.
-          </p>
-          <p>
-            “Beyond a wholesome discipline, be gentle with yourself. You are a
-            child of the universe no less than the trees and the stars; you have
-            a right to be here.”
-          </p>
-          <p class="text-light">An excerpt from “Desiderata” by Max Ehrmann</p>
-        </div>
-      </section>
-
-      <hr />
-      <!-- ABOUT ME SECTION -->
-      <section class="about-me-section">
-        <div class="grid about-me-shapes">
-          <div class="about-me-shape-1">
-            <img src="shapes/red-one.svg" alt="red shape" />
-          </div>
-          <div class="about-me-shape-2">
-            <img src="shapes/tan-one.svg" alt="beige shape" />
-          </div>
-          <div class="about-me-shape-3">
-            <img
-              src="shapes/diamonds.svg"
-              alt="diamonds"
-              class="hidden-upto-640"
-            />
-          </div>
-          <h2 class="about-me-title-copy hidden-upto-1280">
-            <span class="about-me-sans">Get to Know More </span>
-            <span class="about-me-serif">About Me</span>
-          </h2>
-        </div>
-        <h2 class="about-me-title hidden-at-1280">
-          <span class="about-me-sans">Get to Know More </span>
-          <span class="about-me-serif">About Me</span>
-        </h2>
-        <div class="about-me-content">
-          <div class="grid about-me-images">
-            <img
-              src="img/about-me.png"
-              alt="about me image"
-              class="about-me-pic"
-            />
-            <img
-              src="shapes/red-one.svg"
-              alt="red shape"
-              class="hidden-upto-640 about-me-img-shape-1"
-            />
-            <img
-              src="shapes/tan-three.svg"
-              alt="tan shape"
-              class="hidden-upto-640 about-me-img-shape-2"
-            />
-          </div>
-          <div class="about-me-left-column">
-            <div class="about-me-explore-text">
-              <h3>Explore this Website</h3>
-              <p>
-                I don’t have much to show for yet, but I promise that this
-                website is going to be full of wonderful things soon.
-              </p>
-              <p>
-                You can check out my college projects and works below to see
-                what I can do for you. If you like what you see, then I’d really
-                appreciate it if you could also take a moment to follow my
-                socials.
-              </p>
-            </div>
-            <div class="grid about-me-divider hidden-at-640">
-              <div class="get-in-touch-btn">
-                <a href="contact.html" class="btn btn-red">
-                  <span>Get in Touch</span>
-                  <img src="shapes/btn-red-arrow.svg" alt="arrow" />
-                </a>
-              </div>
+        <div class="featured-works">
+          <div class="featured-project">
+            <div class="project-image-wrapper">
               <img
-                src="shapes/diamonds.svg"
-                alt="diamonds"
-                class="about-me-diamonds"
+                src="img/kawaii-count.png"
+                alt="kawaii count"
+                class="project-image"
               />
             </div>
-          </div>
-          <div class="about-me-middle-column">
-            <div class="about-me-story-text">
-              <h3>Personal Story</h3>
-              <p>
-                Despite software engineering being my current major, I have
-                always been invested in the world of artistic expression and
-                creation.
-              </p>
-              <p>
-                I was then greatly conflicted when I had to take a course that
-                was different from what I truly wanted to study, but my first
-                year of college proved my fears unfounded.
-              </p>
-              <p>
-                I’m now currently focusing on finishing my software engineering
-                degree while working on creative development projects on the
-                side. I pray that the job market doesn’t collapse before then.
-              </p>
-            </div>
-            <div class="more-about-me-btn-copy hidden-upto-1280">
-              <a href="about.html" class="btn btn-tan">
-                <span>More About Me</span>
-                <img src="shapes/btn-tan-arrow.svg" alt="arrow" />
-              </a>
+            <div class="project-content">
+              <div class="project-content-text">
+                <div class="project-title">Kawaii Count</div>
+                <div class="project-text">
+                  A Java Enterprise Programming Project
+                </div>
+              </div>
+              <div class="visit-page-btn">
+                <a href="project-1.html" class="btn btn-white">
+                  <span>Visit Page</span>
+                  <img src="shapes/btn-white-arrow.svg" alt="arrow" />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="about-me-bottom hidden-at-1280">
-          <div class="get-in-touch-btn-copy hidden-upto-640">
-            <a href="#" class="btn btn-red">
-              <span>Get in Touch</span>
-              <img src="shapes/btn-red-arrow.svg" alt="arrow" />
-            </a>
+          <div class="featured-project">
+            <div class="project-image-wrapper">
+              <img
+                src="img/jose-rizal-website.png"
+                alt="jose rizal website"
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-content-text">
+                <div class="project-title">Jose Rizal Website</div>
+                <div class="project-text">
+                  A Rizal Life Appreciation Project
+                </div>
+              </div>
+              <div class="visit-page-btn">
+                <a href="project-2.html" class="btn btn-white">
+                  <span>Visit Page</span>
+                  <img src="shapes/btn-white-arrow.svg" alt="arrow" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="more-about-me-btn">
-            <a href="#" class="btn btn-tan">
-              <span>More About Me</span>
-              <img src="shapes/btn-tan-arrow.svg" alt="arrow" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-      <!-- FEATURED PROJECTS SECTION -->
-      <section class="selected-projects-section">
-        <div class="grid selected-projects-shapes">
-          <div class="selected-projects-shape-1">
-            <img src="shapes/tan-two.svg" alt="tan shape" />
-          </div>
-          <div class="selected-projects-shape-2"></div>
-          <div class="selected-projects-shape-3">
-            <img src="shapes/black-one.svg" alt="black shape" />
-          </div>
-          <h2 class="selected-projects-title-copy hidden-upto-1280">
-            <span class="selected-projects-sans">Check out my </span>
-            <span class="selected-projects-serif">Selected Projects</span>
-          </h2>
-        </div>
-        <h2 class="selected-projects-title hidden-at-1280">
-          <span class="selected-projects-sans">Check out my </span>
-          <span class="selected-projects-serif">Selected Projects</span>
-        </h2>
-        <h2 class="heading">
-          <span class="heading-serif">Java Applications / </span>
-          <span class="heading-sans">Deployed Websites</span>
-          <span class="heading-serif"> / Games</span>
-        </h2>
-        <div class="more-projects-btn">
-          <a href="works.html" class="btn btn-black">
-            <span>More Projects</span>
-            <img src="shapes/btn-black-arrow.svg" alt="arrow" />
-          </a>
-        </div>
-        <!-- FEATURED PROJECTS CARDS -->
-        <div class="featured-projects">
           <div class="featured-project">
             <div class="project-image-wrapper">
               <img
@@ -371,20 +244,20 @@
           <div class="featured-project">
             <div class="project-image-wrapper">
               <img
-                src="img/kawaii-count.png"
-                alt="kawaii count"
+                src="img/five-nights.png"
+                alt="love from below"
                 class="project-image"
               />
             </div>
             <div class="project-content">
               <div class="project-content-text">
-                <div class="project-title">Kawaii Count</div>
+                <div class="project-title">Nights at Iacademy</div>
                 <div class="project-text">
-                  A Java Enterprise Programming Project
+                  A Personal Game Development Project
                 </div>
               </div>
               <div class="visit-page-btn">
-                <a href="project-1.html" class="btn btn-white">
+                <a href="project-4.html" class="btn btn-white">
                   <span>Visit Page</span>
                   <img src="shapes/btn-white-arrow.svg" alt="arrow" />
                 </a>
@@ -392,7 +265,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <hr />
       <!-- CONTACT ME SECTION IS ALWAYS PRESENT AT THE BOTTOM OF EACH PAGE -->

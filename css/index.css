@@ -235,71 +235,12 @@
 /* FEATURED PROJECTS CARDS */
 .featured-projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   max-width: 380px;
   margin: 0 auto;
 
   gap: var(--padding-small);
-}
-
-.featured-project {
-  border-radius: var(--border-radius);
-  border-top-left-radius: 0;
-  overflow: hidden;
-}
-
-.project-image-wrapper {
-  overflow: hidden;
-}
-
-.project-image {
-  width: 100%;
-  display: block;
-  border-radius: 0;
-
-  transform: scale(1);
-  transition: transform 0.4s ease;
-}
-
-.featured-project:hover .project-image {
-  transform: scale(1.02);
-}
-
-.project-content {
-  padding: 12px;
-
-  background-color: var(--color-red);
-  border-bottom-right-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
-}
-
-.project-content-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-align: center;
-}
-
-.project-title {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 700;
-  font-size: 28px;
-
-  color: var(--color-beige);
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.project-text {
-  font-family: var(--font-sans);
-  font-style: italic;
-  font-weight: 300;
-  font-size: 14px;
-
-  color: var(--color-beige);
-  line-height: 1.5;
 }
 
 /* MEDIA QUERIES */
@@ -312,14 +253,6 @@
   .hero-serif {
     font-size: 96px;
     line-height: 0.8;
-  }
-
-  .project-title {
-    font-size: 36px;
-  }
-
-  .project-text {
-    font-size: 18px;
   }
 
   /* HERO SECTION */
@@ -346,14 +279,6 @@
   .about-me-serif,
   .selected-projects-serif {
     font-size: 96px;
-  }
-
-  .project-title {
-    font-size: 42px;
-  }
-
-  .project-text {
-    font-size: 20px;
   }
 
   /* HERO SECTION */
@@ -585,14 +510,6 @@
     font-size: 124px;
   }
 
-  .project-title {
-    font-size: 64px;
-  }
-
-  .project-text {
-    font-size: 24px;
-  }
-
   /* HERO SECTION */
   .hero-section {
     position: relative;
@@ -801,24 +718,5 @@
     width: 270px;
     top: -70px;
     margin-left: -75px;
-  }
-}
-
-@media (min-width: 1750px) {
-  /* FEATURED PROJECTS */
-  .project-content {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-
-    justify-content: space-between;
-    align-items: center;
-
-    padding-right: 32px;
-  }
-
-  .project-content-text {
-    text-align: left;
-    padding: 20px;
   }
 }

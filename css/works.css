@@ -1,0 +1,120 @@
+/* CSS FILE FOR MY FEATURED WORKS */
+.works-title {
+  text-align: center;
+}
+
+.works-sans {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 42px;
+
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.works-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 72px;
+
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.project-shapes {
+  display: none;
+}
+
+/* ALL PROJECTS */
+.featured-works {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+
+  max-width: 380px;
+  margin: 0 auto;
+
+  gap: var(--padding-small);
+}
+
+@media (min-width: 640px) {
+  .works-sans {
+    font-size: 64px;
+  }
+
+  .works-serif {
+    font-size: 96px;
+  }
+
+  .featured-works {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-shapes {
+    display: grid;
+    padding-bottom: var(--grid-gap-medium);
+  }
+
+  .project-shape-2 {
+    grid-column-start: 7;
+  }
+
+  .featured-works {
+    max-width: 1820px;
+    gap: var(--grid-gap-medium);
+  }
+
+  .featured-project {
+    max-width: 850px;
+  }
+
+  .works-sans {
+    font-size: 72px;
+  }
+
+  .works-serif {
+    font-size: 108px;
+  }
+}
+
+@media (min-width: 940px) {
+  .featured-works {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: var(--grid-gap-large);
+  }
+}
+
+@media (min-width: 1280px) {
+  .featured-works {
+    gap: var(--padding-small);
+  }
+
+  .project-shape-2 {
+    grid-column-start: 11;
+  }
+
+  .works-title,
+  .heading {
+    text-align: left;
+  }
+
+  .works-sans {
+    font-size: 96px;
+  }
+
+  .works-serif {
+    font-size: 132px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .works-sans {
+    font-size: 128px;
+  }
+
+  .works-serif {
+    font-size: 164px;
+  }
+}

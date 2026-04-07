@@ -1,3 +1,4 @@
+/* CSS FILE FOR PROJECTS */
 :root {
   /* PROJECT SPECIFIC COLORS */
   /* KAWAII COUNT */
@@ -24,10 +25,15 @@
   --lfb-color-6: #f7b58c;
   --lfb-color-7: #ffefff;
   --lfb-color-8: #181010;
+
+  /* FIVE NIGHTS */
+  --nights-color-1: #306230;
+  --nights-color-2: #8bac0f;
+  --nights-color-3: #9bbc0f;
+  --nights-color-4: #0f380f;
 }
 
-/* CSS FILE FOR PROJECTS */
-.project-title {
+.single-project-title {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
@@ -148,6 +154,30 @@
   grid-row: 2;
 }
 
+/* FIVE NIGHTS */
+.nights-color-1 {
+  aspect-ratio: 1 / 1;
+  background-color: var(--nights-color-1);
+}
+
+.nights-color-2 {
+  background-color: var(--nights-color-2);
+}
+
+.nights-color-3 {
+  background-color: var(--nights-color-3);
+
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.nights-color-4 {
+  background-color: var(--nights-color-4);
+
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
 /* LOVE FROM BELOW */
 .lfb-color-1 {
   background-color: var(--lfb-color-1);
@@ -240,6 +270,10 @@
   font-family: var(--font-garamond);
 }
 
+.font-lcd-solid {
+  font-family: var(--font-lcd-solid);
+}
+
 /* PROJECT BUTTONS */
 .project-buttons {
   display: flex;
@@ -274,7 +308,7 @@
 
 @media (min-width: 640px) {
   /* INCREASE FONT SIZES */
-  .project-title {
+  .single-project-title {
     font-size: 48px;
   }
 
@@ -326,7 +360,7 @@
 }
 
 @media (min-width: 768px) {
-  .project-content {
+  .project-content-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -362,7 +396,7 @@
 
 @media (min-width: 1024px) {
   /* INCREASE FONT SIZES */
-  .project-title {
+  .single-project-title {
     font-size: 64px;
   }
 
@@ -370,7 +404,7 @@
     gap: 18px;
   }
 
-  .project-content,
+  .project-content-section,
   .project-colors {
     gap: var(--grid-gap-large);
   }
@@ -382,7 +416,7 @@
 }
 
 @media (min-width: 1280px) {
-  .project-title {
+  .single-project-title {
     font-size: 80px;
   }
 
@@ -456,7 +490,7 @@
   }
 
   /* MAKE PROJECT DESCRIPTION STICKY WHEN SCROLLING THROUGH PROJECT IMAGES */
-  .project-content {
+  .project-content-section {
     align-items: start;
   }
 

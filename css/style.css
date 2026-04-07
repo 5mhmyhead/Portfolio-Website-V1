@@ -97,6 +97,14 @@
   font-display: swap;
 }
 
+@font-face {
+  src: url(../ttf/lcdSolid.ttf) format("truetype");
+  font-family: "LCD SOLID";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* ROOT VARIABLES */
 :root {
   /* COLORS */
@@ -114,6 +122,7 @@
   --font-poppins: "Poppins", Arial, sans-serif;
   --font-baskerville: "Baskerville SC", Georgia, serif;
   --font-garamond: "EB Garamond", "Times New Roman", serif;
+  --font-lcd-solid: "LCD Solid", "Courier New", serif;
 
   /* PADDING SIZES  */
   --padding-small: 24px;
@@ -499,7 +508,7 @@ a.nav-item:hover,
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
-  max-height: 200px;
+  max-height: 250px;
   opacity: 1;
 }
 
@@ -526,6 +535,66 @@ a.nav-item:hover,
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+/* FEATURED PROJECT CARD STYLING */
+.featured-project {
+  border-radius: var(--border-radius);
+  border-top-left-radius: 0;
+  overflow: hidden;
+}
+
+.project-image-wrapper {
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.featured-project:hover .project-image {
+  transform: scale(1.02);
+}
+
+.project-content {
+  padding: 12px;
+
+  background-color: var(--color-red);
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.project-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.project-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 28px;
+
+  color: var(--color-beige);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.project-text {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+
+  color: var(--color-beige);
+  line-height: 1.5;
 }
 
 /* CONTACT ME SECTION STYLING */
@@ -614,6 +683,17 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 390px) {
+  /* FEATURED PROJECTS */
+  .project-title {
+    font-size: 36px;
+  }
+
+  .project-text {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 640px) {
   /* HIDDEN CLASSES */
   .hidden-upto-640 {
@@ -648,6 +728,15 @@ footer {
 
   .heading-serif {
     font-size: 32px;
+  }
+
+  /* FEATURED PROJECTS */
+  .project-title {
+    font-size: 42px;
+  }
+
+  .project-text {
+    font-size: 20px;
   }
 
   /* CONTACTS SECTION */
@@ -918,6 +1007,15 @@ footer {
     font-size: 36px;
   }
 
+  /* FEATURED PROJECTS */
+  .project-title {
+    font-size: 60px;
+  }
+
+  .project-text {
+    font-size: 24px;
+  }
+
   /* CONTACTS SECTION */
   .contact-me-shape-1 {
     grid-column: 11;
@@ -1085,5 +1183,22 @@ footer {
 @media (min-width: 1750px) {
   .visit-page-btn {
     display: flex;
+  }
+
+  /* FEATURED PROJECTS */
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 32px;
+  }
+
+  .project-content-text {
+    text-align: left;
+    padding: 20px;
   }
 }
