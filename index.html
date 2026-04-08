@@ -8,6 +8,21 @@
     <title>Portfolio of Dwyane Sido</title>
   </head>
   <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+      <div class="loader-logo">
+        <!-- ROTATING STAR -->
+        <img
+          class="loader-star"
+          src="shapes/cursor-hover.svg"
+          alt="loading star"
+        />
+
+        <span class="logo-sans">Portfolio of</span>
+        <span class="logo-serif">Dwyane Sido</span>
+      </div>
+    </div>
+
     <header>
       <a href="index.html">
         <span class="logo-sans">Portfolio of</span>
@@ -45,32 +60,31 @@
         >
         <hr />
         <a href="about.html" class="nav-item">
-          <span class="sidebar-sans">What is it </span>
-          <span class="sidebar-serif">About Me?</span>
+          <span class="sidebar-sans">More </span>
+          <span class="sidebar-serif">About Me</span>
         </a>
         <hr />
 
         <!-- HOVER DROPDOWN FOR MY FEATURED WORKS -->
         <div class="nav-item nav-dropdown">
-          <a href="works.html">
-            <button class="nav-dropdown-btn">
-              <div class="dropdown-btn-content">
-                <span class="sidebar-sans">My Featured </span>
-                <span class="sidebar-serif">Works</span>
-              </div>
-              <img
-                src="shapes/arrow-down.svg"
-                alt="arrow down"
-                class="dropdown-arrow"
-              />
-            </button>
-          </a>
+          <button class="nav-dropdown-btn">
+            <div class="dropdown-btn-content">
+              <span class="sidebar-sans">My Featured </span>
+              <span class="sidebar-serif">Works</span>
+            </div>
+            <img
+              src="shapes/arrow-down.svg"
+              alt="arrow down"
+              class="dropdown-arrow"
+            />
+          </button>
           <div class="nav-dropdown-content">
             <hr class="nav-hr" />
             <a href="project-1.html">Kawaii Count</a>
             <a href="project-2.html">The Jose Rizal Website</a>
             <a href="project-3.html">Love From Below</a>
             <a href="project-4.html">Five Nights at iACADEMY</a>
+            <a href="works.html">View All Projects</a>
           </div>
         </div>
 
@@ -183,132 +197,14 @@
           <h3>Welcome to my website.</h3>
           <p>
             I’m currently a 20 y.o. college student learning the wonderfully
-            volatile life of a software engineer. Aspiring to become a
-            professional in the sphere of computer technology, I’m hoping to
-            earn a sizeable enough living to laze around all day without regret.
-            I hope you enjoy your time here.
+            volatile life of a software engineer.
           </p>
           <p>
-            “Beyond a wholesome discipline, be gentle with yourself. You are a
-            child of the universe no less than the trees and the stars; you have
-            a right to be here.”
+            Aspiring to become a professional in the sphere of computer
+            technology, I’m hoping to earn a sizeable enough living to laze
+            around all day without regret.
           </p>
-          <p class="text-light">An excerpt from “Desiderata” by Max Ehrmann</p>
-        </div>
-      </section>
-
-      <hr />
-      <!-- ABOUT ME SECTION -->
-      <section class="about-me-section">
-        <div class="grid about-me-shapes">
-          <div class="about-me-shape-1">
-            <img src="shapes/red-one.svg" alt="red shape" />
-          </div>
-          <div class="about-me-shape-2">
-            <img src="shapes/tan-one.svg" alt="beige shape" />
-          </div>
-          <div class="about-me-shape-3">
-            <img
-              src="shapes/diamonds.svg"
-              alt="diamonds"
-              class="hidden-upto-640"
-            />
-          </div>
-          <h2 class="about-me-title-copy hidden-upto-1280">
-            <span class="about-me-sans">Get to Know More </span>
-            <span class="about-me-serif">About Me</span>
-          </h2>
-        </div>
-        <h2 class="about-me-title hidden-at-1280">
-          <span class="about-me-sans">Get to Know More </span>
-          <span class="about-me-serif">About Me</span>
-        </h2>
-        <div class="about-me-content">
-          <div class="grid about-me-images">
-            <img
-              src="img/about-me.png"
-              alt="about me image"
-              class="about-me-pic"
-            />
-            <img
-              src="shapes/red-one.svg"
-              alt="red shape"
-              class="hidden-upto-640 about-me-img-shape-1"
-            />
-            <img
-              src="shapes/tan-three.svg"
-              alt="tan shape"
-              class="hidden-upto-640 about-me-img-shape-2"
-            />
-          </div>
-          <div class="about-me-left-column">
-            <div class="about-me-explore-text">
-              <h3>Explore this Website</h3>
-              <p>
-                I don’t have much to show for yet, but I promise that this
-                website is going to be full of wonderful things soon.
-              </p>
-              <p>
-                You can check out my college projects and works below to see
-                what I can do for you. If you like what you see, then I’d really
-                appreciate it if you could also take a moment to follow my
-                socials.
-              </p>
-            </div>
-            <div class="grid about-me-divider hidden-at-640">
-              <div class="get-in-touch-btn">
-                <a href="contact.html" class="btn btn-red">
-                  <span>Get in Touch</span>
-                  <img src="shapes/btn-red-arrow.svg" alt="arrow" />
-                </a>
-              </div>
-              <img
-                src="shapes/diamonds.svg"
-                alt="diamonds"
-                class="about-me-diamonds"
-              />
-            </div>
-          </div>
-          <div class="about-me-middle-column">
-            <div class="about-me-story-text">
-              <h3>Personal Story</h3>
-              <p>
-                Despite software engineering being my current major, I have
-                always been invested in the world of artistic expression and
-                creation.
-              </p>
-              <p>
-                I was then greatly conflicted when I had to take a course that
-                was different from what I truly wanted to study, but my first
-                year of college proved my fears unfounded.
-              </p>
-              <p>
-                I’m now currently focusing on finishing my software engineering
-                degree while working on creative development projects on the
-                side. I pray that the job market doesn’t collapse before then.
-              </p>
-            </div>
-            <div class="more-about-me-btn-copy hidden-upto-1280">
-              <a href="about.html" class="btn btn-tan">
-                <span>More About Me</span>
-                <img src="shapes/btn-tan-arrow.svg" alt="arrow" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="about-me-bottom hidden-at-1280">
-          <div class="get-in-touch-btn-copy hidden-upto-640">
-            <a href="#" class="btn btn-red">
-              <span>Get in Touch</span>
-              <img src="shapes/btn-red-arrow.svg" alt="arrow" />
-            </a>
-          </div>
-          <div class="more-about-me-btn">
-            <a href="#" class="btn btn-tan">
-              <span>More About Me</span>
-              <img src="shapes/btn-tan-arrow.svg" alt="arrow" />
-            </a>
-          </div>
+          <p class="text-light">I hope you enjoy your time here.</p>
         </div>
       </section>
 
@@ -346,13 +242,21 @@
         <!-- FEATURED PROJECTS CARDS -->
         <div class="featured-projects">
           <div class="featured-project">
-            <div class="project-image-wrapper">
-              <img
-                src="img/love-from-below.png"
-                alt="love from below"
-                class="project-image"
-              />
-            </div>
+            <a href="project-3.html" class="project-card-link">
+              <div class="project-image-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="img/love-from-below-big.png"
+                  />
+                  <img
+                    src="img/love-from-below.png"
+                    alt="love from below"
+                    class="project-image"
+                  />
+                </picture>
+              </div>
+            </a>
             <div class="project-content">
               <div class="project-content-text">
                 <div class="project-title">Love From Below</div>
@@ -369,13 +273,21 @@
             </div>
           </div>
           <div class="featured-project">
-            <div class="project-image-wrapper">
-              <img
-                src="img/kawaii-count.png"
-                alt="kawaii count"
-                class="project-image"
-              />
-            </div>
+            <a href="project-1.html" class="project-card-link">
+              <div class="project-image-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="img/kawaii-count-big.png"
+                  />
+                  <img
+                    src="img/kawaii-count.png"
+                    alt="kawaii count"
+                    class="project-image"
+                  />
+                </picture>
+              </div>
+            </a>
             <div class="project-content">
               <div class="project-content-text">
                 <div class="project-title">Kawaii Count</div>
@@ -489,7 +401,12 @@
       </div>
     </footer>
 
+    <div class="cursor">
+      <div class="cursor-inner">
+        <img src="shapes/cursor.svg" alt="cursor" />
+      </div>
+    </div>
     <!-- SCRIPT THAT CONTAINS SIDEBAR FUNCTIONALITY AND LOCAL TIME -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

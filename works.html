@@ -8,6 +8,21 @@
     <title>Dwyane Sido | Works</title>
   </head>
   <body>
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+      <div class="loader-logo">
+        <!-- ROTATING STAR -->
+        <img
+          class="loader-star"
+          src="shapes/cursor-hover.svg"
+          alt="loading star"
+        />
+
+        <span class="logo-sans">Portfolio of</span>
+        <span class="logo-serif">Dwyane Sido</span>
+      </div>
+    </div>
+
     <header>
       <a href="index.html">
         <span class="logo-sans">Portfolio of</span>
@@ -45,32 +60,31 @@
         >
         <hr />
         <a href="about.html" class="nav-item">
-          <span class="sidebar-sans">What is it </span>
-          <span class="sidebar-serif">About Me?</span>
+          <span class="sidebar-sans">More </span>
+          <span class="sidebar-serif">About Me</span>
         </a>
         <hr />
 
         <!-- HOVER DROPDOWN FOR MY FEATURED WORKS -->
         <div class="nav-item nav-dropdown">
-          <a href="works.html">
-            <button class="nav-dropdown-btn">
-              <div class="dropdown-btn-content">
-                <span class="sidebar-sans">My Featured </span>
-                <span class="sidebar-serif">Works</span>
-              </div>
-              <img
-                src="shapes/arrow-down.svg"
-                alt="arrow down"
-                class="dropdown-arrow"
-              />
-            </button>
-          </a>
+          <button class="nav-dropdown-btn">
+            <div class="dropdown-btn-content">
+              <span class="sidebar-sans">My Featured </span>
+              <span class="sidebar-serif">Works</span>
+            </div>
+            <img
+              src="shapes/arrow-down.svg"
+              alt="arrow down"
+              class="dropdown-arrow"
+            />
+          </button>
           <div class="nav-dropdown-content">
             <hr class="nav-hr" />
             <a href="project-1.html">Kawaii Count</a>
             <a href="project-2.html">The Jose Rizal Website</a>
             <a href="project-3.html">Love From Below</a>
             <a href="project-4.html">Five Nights at iACADEMY</a>
+            <a href="works.html">View All Projects</a>
           </div>
         </div>
 
@@ -173,13 +187,21 @@
         </div>
         <div class="featured-works">
           <div class="featured-project">
-            <div class="project-image-wrapper">
-              <img
-                src="img/kawaii-count.png"
-                alt="kawaii count"
-                class="project-image"
-              />
-            </div>
+            <a href="project-1.html" class="project-card-link">
+              <div class="project-image-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="img/kawaii-count-big.png"
+                  />
+                  <img
+                    src="img/kawaii-count.png"
+                    alt="kawaii count"
+                    class="project-image"
+                  />
+                </picture>
+              </div>
+            </a>
             <div class="project-content">
               <div class="project-content-text">
                 <div class="project-title">Kawaii Count</div>
@@ -196,13 +218,21 @@
             </div>
           </div>
           <div class="featured-project">
-            <div class="project-image-wrapper">
-              <img
-                src="img/jose-rizal-website.png"
-                alt="jose rizal website"
-                class="project-image"
-              />
-            </div>
+            <a href="project-2.html" class="project-card-link">
+              <div class="project-image-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="img/jose-rizal-website-big.png"
+                  />
+                  <img
+                    src="img/jose-rizal-website.png"
+                    alt="jose rizal website"
+                    class="project-image"
+                  />
+                </picture>
+              </div>
+            </a>
             <div class="project-content">
               <div class="project-content-text">
                 <div class="project-title">Jose Rizal Website</div>
@@ -219,13 +249,21 @@
             </div>
           </div>
           <div class="featured-project">
-            <div class="project-image-wrapper">
-              <img
-                src="img/love-from-below.png"
-                alt="love from below"
-                class="project-image"
-              />
-            </div>
+            <a href="project-3.html" class="project-card-link">
+              <div class="project-image-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="img/love-from-below-big.png"
+                  />
+                  <img
+                    src="img/love-from-below.png"
+                    alt="love from below"
+                    class="project-image"
+                  />
+                </picture>
+              </div>
+            </a>
             <div class="project-content">
               <div class="project-content-text">
                 <div class="project-title">Love From Below</div>
@@ -242,19 +280,25 @@
             </div>
           </div>
           <div class="featured-project">
-            <div class="project-image-wrapper">
-              <img
-                src="img/five-nights.png"
-                alt="love from below"
-                class="project-image"
-              />
-            </div>
+            <a href="project-4.html" class="project-card-link">
+              <div class="project-image-wrapper">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="img/five-nights-big.png"
+                  />
+                  <img
+                    src="img/five-nights.png"
+                    alt="love from below"
+                    class="project-image"
+                  />
+                </picture>
+              </div>
+            </a>
             <div class="project-content">
               <div class="project-content-text">
                 <div class="project-title">Nights at Iacademy</div>
-                <div class="project-text">
-                  A Personal Game Development Project
-                </div>
+                <div class="project-text">A 2D Java Horror Game</div>
               </div>
               <div class="visit-page-btn">
                 <a href="project-4.html" class="btn btn-white">
@@ -362,7 +406,12 @@
       </div>
     </footer>
 
+    <div class="cursor">
+      <div class="cursor-inner">
+        <img src="shapes/cursor.svg" alt="cursor" />
+      </div>
+    </div>
     <!-- SCRIPT THAT CONTAINS SIDEBAR FUNCTIONALITY AND LOCAL TIME -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

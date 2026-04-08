@@ -153,6 +153,99 @@ body {
   font-weight: 400;
 }
 
+/* CURSOR STYLING */
+/* ONLY SHOW CUSTOM CURSOR ON DEVICES WITH HOVER */
+@media (hover: hover) and (pointer: fine) {
+  .cursor {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: difference;
+  }
+
+  .cursor-inner img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+  }
+
+  body,
+  * {
+    cursor: none !important;
+  }
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none !important;
+  }
+}
+
+/* PAGE LOADER */
+.page-loader {
+  position: fixed;
+  inset: 0;
+
+  background-color: var(--color-black);
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--color-beige);
+  animation: loader-fade-in 0.5s ease forwards;
+}
+
+/* ROTATING STAR WHEN LOADING */
+.loader-star {
+  width: 36px;
+  height: 36px;
+
+  margin-bottom: 20px;
+  animation: rotate-star 4s linear infinite;
+}
+
+@keyframes rotate-star {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* PLACEHOLDER */
 main {
   padding: var(--padding-small);
@@ -308,7 +401,6 @@ p {
   font-style: italic;
   font-weight: 500;
   font-size: 20px;
-  cursor: pointer;
 
   box-shadow: 0 0 0 0px transparent;
   transition: box-shadow 0.3s ease;
@@ -359,10 +451,6 @@ p {
 
 .btn-white:hover {
   box-shadow: 0 0 0 2px var(--color-tan);
-}
-
-.menu-btn:hover {
-  cursor: pointer;
 }
 
 .visit-page-btn {
@@ -480,7 +568,6 @@ a.nav-item:hover,
 
   background: none;
   border: none;
-  cursor: pointer;
   transition: 0.3s ease;
 }
 
@@ -943,7 +1030,6 @@ footer {
     padding: 12px;
     gap: 20px;
 
-    cursor: pointer;
     transition: 0.2s ease;
     z-index: 201;
   }
@@ -1071,6 +1157,10 @@ footer {
 
   header {
     padding-bottom: 20px;
+  }
+
+  main {
+    padding-top: 24px;
   }
 
   .social-links,

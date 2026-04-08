@@ -29,7 +29,7 @@
 /* ALL PROJECTS */
 .featured-works {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 
   max-width: 380px;
   margin: 0 auto;
@@ -38,6 +38,10 @@
 }
 
 @media (min-width: 640px) {
+  .featured-works {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  }
+
   .works-sans {
     font-size: 64px;
   }

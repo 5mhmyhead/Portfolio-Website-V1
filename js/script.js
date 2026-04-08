@@ -54,3 +54,45 @@ document.fonts.ready.then(() => {
   matchImageHeight();
   window.addEventListener("resize", matchImageHeight);
 });
+
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  // CUSTOM CURSOR FUNCTIONALITY
+  const cursor = document.querySelector(".cursor");
+  const cursorInner = document.querySelector(".cursor-inner img");
+
+  let scale = 1;
+
+  window.addEventListener("mousemove", (e) => {
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-18%, -5%)`;
+
+    // APPLY SCALE SEPARATELY
+    cursorInner.style.transform = `scale(${scale})`;
+  });
+
+  const hoverElements = document.querySelectorAll(
+    "a, button, .sidebar-rail, .menu-btn",
+  );
+
+  hoverElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursorInner.src = "shapes/cursor-hover.svg";
+      scale = 2;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      cursorInner.src = "shapes/cursor.svg";
+      scale = 1;
+    });
+  });
+}
+
+// PAGE LOADER TO LOAD ALL IMAGES AND FONTS BEFORE FADING OUT
+const loader = document.querySelector(".page-loader");
+
+if (loader) {
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      loader.classList.add("loaded");
+    }, 500);
+  });
+}
