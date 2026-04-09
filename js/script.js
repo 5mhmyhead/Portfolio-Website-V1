@@ -96,3 +96,20 @@ if (loader) {
     }, 500);
   });
 }
+
+async function getSong() {
+  try {
+    const res = await fetch("/.netlify/functions/last-played");
+    const track = await res.json();
+    const lastPlayed = document.querySelector("#last-played");
+
+    if (lastPlayed) {
+      const status = track.nowPlaying ? "Currently Playing" : "Last Played";
+      lastPlayed.innerHTML = `${status}: ${track.title} by ${track.artist}`;
+    }
+  } catch (err) {
+    console.error("Error fetching song:", err);
+  }
+}
+
+getSong();
