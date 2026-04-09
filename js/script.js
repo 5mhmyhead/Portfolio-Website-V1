@@ -98,7 +98,7 @@ if (loader) {
 }
 
 // MARQUEE EFFECT ANIMATES WHEN SONG TEXT LENGTH IS TOO LONG
-function setRailText(text) {
+function setRailText(text, styledText) {
   const lastPlayed = document.querySelector("#last-played");
   if (!lastPlayed) return;
 
@@ -116,9 +116,10 @@ function setRailText(text) {
 
     if (textHeight > railHeight) {
       // DUPLICATE IF TEXT IS TOO LONG
-      lastPlayed.innerHTML = `${text}<span aria-hidden="true" style="padding-block: 75px;"> ${text}</span>`;
+      lastPlayed.innerHTML = `${styledText} ${styledText}`;
       lastPlayed.classList.add("marquee-active");
     } else {
+      lastPlayed.innerHTML = styledText;
       lastPlayed.classList.remove("marquee-active");
     }
 
@@ -135,10 +136,12 @@ async function getSong() {
     const res = await fetch("/.netlify/functions/last-played");
     const track = await res.json();
 
-    const status = track.nowPlaying ? "Currently Playing" : "Last Played";
-    const text = `${status}: ${track.title} by ${track.artist}`;
+    const status = track.nowPlaying ? "Currently Listening to" : "Last Played";
 
-    setRailText(text);
+    const text = `${status}: ${track.title} by ${track.artist}`;
+    const styledText = `${status}: ${track.title} <span class="text-light" style="font-weight: 300;">by ${track.artist}</span>`;
+
+    setRailText(text, styledText);
   } catch (err) {
     console.error("Error fetching song:", err);
   }
