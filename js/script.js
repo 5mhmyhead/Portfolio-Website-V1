@@ -23,7 +23,7 @@ function updateTime() {
   const ampm = hours >= 12 ? "pm" : "am";
   const displayHours = hours % 12 || 12;
 
-  const timeString = `Local Time: ${displayHours}:${minutes}:${seconds} ${ampm}, PST`;
+  const timeString = `Local Time: ${displayHours}:${minutes}:${seconds} ${ampm}, PST+8`;
 
   timeElements.forEach((el) => (el.textContent = timeString));
 }
