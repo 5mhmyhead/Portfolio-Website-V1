@@ -97,21 +97,50 @@ if (loader) {
   });
 }
 
+// MARQUEE EFFECT ANIMATES WHEN SONG TEXT LENGTH IS TOO LONG
+function setRailText(text) {
+  const lastPlayed = document.querySelector("#last-played");
+  if (!lastPlayed) return;
+
+  const railLabel =
+    lastPlayed.closest(".rail-label") || lastPlayed.parentElement;
+
+  lastPlayed.classList.add("blurring");
+
+  setTimeout(() => {
+    lastPlayed.textContent = text;
+
+    // CHECK IF TEXT OVERFLOWS
+    const railHeight = railLabel.getBoundingClientRect().height;
+    const textHeight = lastPlayed.scrollHeight;
+
+    if (textHeight > railHeight) {
+      // DUPLICATE IF TEXT IS TOO LONG
+      lastPlayed.innerHTML = `${text}<span aria-hidden="true" style="padding-block: 75px;"> ${text}</span>`;
+      lastPlayed.classList.add("marquee-active");
+    } else {
+      lastPlayed.classList.remove("marquee-active");
+    }
+
+    lastPlayed.classList.remove("blurring");
+  }, 400);
+}
+
 // SIDEBAR RAIL LABEL GETS REPLACED BY LAST PLAYED SONG
 async function getSong() {
+  const lastPlayed = document.querySelector("#last-played");
+  if (!lastPlayed) return;
+
   try {
     const res = await fetch("/.netlify/functions/last-played");
     const track = await res.json();
-    const lastPlayed = document.querySelector("#last-played");
 
-    if (lastPlayed) {
-      const status = track.nowPlaying ? "Currently Playing" : "Last Played";
-      lastPlayed.innerHTML = `${status}: ${track.title} <span style="font-weight: 400;">by ${track.artist}</span>`;
-    }
+    const status = track.nowPlaying ? "Currently Playing" : "Last Played";
+    const text = `${status}: ${track.title} by ${track.artist}`;
+
+    setRailText(text);
   } catch (err) {
     console.error("Error fetching song:", err);
-    document.querySelector("#last-played").innerHTML =
-      "Six in the Morning, Nine in the Afternoon";
   }
 }
 

@@ -246,6 +246,18 @@ body {
   }
 }
 
+/* RAIL LABEL SWITCHING */
+.rail-label span {
+  transition:
+    filter 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.rail-label span.blurring {
+  filter: blur(4px);
+  opacity: 0;
+}
+
 /* PLACEHOLDER */
 main {
   padding: var(--padding-small);
@@ -1040,6 +1052,7 @@ footer {
     flex: 1;
     overflow: hidden;
     width: 100%;
+    position: relative;
   }
 
   .rail-label span {
@@ -1048,10 +1061,26 @@ footer {
     font-size: 22px;
 
     letter-spacing: -0.5px;
-
     white-space: nowrap;
-    text-overflow: ellipsis;
     writing-mode: vertical-rl;
+
+    transition:
+      filter 0.4s ease,
+      opacity 0.4s ease;
+  }
+
+  /* ANIMATE MARQUEE WHEN TEXT IS LONG ENOUGH */
+  .rail-label span.marquee-active {
+    animation: marquee-vertical 12s linear infinite;
+  }
+
+  @keyframes marquee-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
   }
 
   .sidebar-rail:hover {
