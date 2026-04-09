@@ -1,10 +1,11 @@
 export const handler = async () => {
+  const LASTFM_API = "https://ws.audioscrobbler.com/2.0/";
   const API_KEY = process.env.LASTFM_API_KEY;
   const USER = process.env.LASTFM_USER;
-  const ENDPOINT = `https://audioscrobbler.com{USER}&api_key=${API_KEY}&format=json&limit=1`;
+
+  const ENDPOINT = `${LASTFM_API}?method=user.getrecenttracks&user=${USER}&api_key=${API_KEY}&format=json&limit=1`;
 
   try {
-    // We use the built-in fetch (available in Node 18+)
     const response = await fetch(ENDPOINT);
     const data = await response.json();
 

@@ -97,6 +97,7 @@ if (loader) {
   });
 }
 
+// SIDEBAR RAIL LABEL GETS REPLACED BY LAST PLAYED SONG
 async function getSong() {
   try {
     const res = await fetch("/.netlify/functions/last-played");
@@ -105,10 +106,12 @@ async function getSong() {
 
     if (lastPlayed) {
       const status = track.nowPlaying ? "Currently Playing" : "Last Played";
-      lastPlayed.innerHTML = `${status}: ${track.title} by ${track.artist}`;
+      lastPlayed.innerHTML = `${status}: ${track.title} <span style="font-weight: 400;">by ${track.artist}</span>`;
     }
   } catch (err) {
     console.error("Error fetching song:", err);
+    document.querySelector("#last-played").innerHTML =
+      "Six in the Morning, Nine in the Afternoon";
   }
 }
 

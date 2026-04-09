@@ -1048,7 +1048,9 @@ footer {
     font-size: 22px;
 
     letter-spacing: -0.5px;
+
     white-space: nowrap;
+    text-overflow: ellipsis;
     writing-mode: vertical-rl;
   }
 
