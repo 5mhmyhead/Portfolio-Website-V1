@@ -144,7 +144,9 @@ async function getSong() {
     const res = await fetch("/.netlify/functions/last-played");
     const track = await res.json();
 
-    const status = track.nowPlaying ? "Currently Listening to" : "Last Played";
+    const status = track.nowPlaying
+      ? "I'm Currently Listening to"
+      : "My Last Listened Song";
 
     const text = `${status}: ${track.title} by ${track.artist}`;
     const styledText = `${status}: ${track.title} <span class="text-light" style="font-weight: 400;">by ${track.artist}</span>`;
