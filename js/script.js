@@ -108,19 +108,27 @@ function setRailText(text, styledText) {
   lastPlayed.classList.add("blurring");
 
   setTimeout(() => {
-    lastPlayed.textContent = text;
+    lastPlayed.classList.remove("marquee-active");
+    lastPlayed.style.removeProperty("--marquee-distance");
+    lastPlayed.innerHTML = styledText;
 
-    // CHECK IF TEXT OVERFLOWS
     const railHeight = railLabel.getBoundingClientRect().height;
     const textHeight = lastPlayed.scrollHeight;
 
+    // CHECK IF TEXT OVERLOWS
     if (textHeight > railHeight) {
-      // DUPLICATE IF TEXT IS TOO LONG
-      lastPlayed.innerHTML = `${styledText} ${styledText}`;
+      const singleHeight = lastPlayed.scrollHeight;
+      lastPlayed.innerHTML = `${styledText} &emsp; ${styledText}`;
+
+      const totalHeight = lastPlayed.scrollHeight;
+      const scrollDistance = totalHeight / 2 + 18;
+
+      // PASS MARQUEE HEIGHT TO PREVENT SUDDEN JUMP IN ANIMATION
+      lastPlayed.style.setProperty(
+        "--marquee-distance",
+        `-${scrollDistance}px`,
+      );
       lastPlayed.classList.add("marquee-active");
-    } else {
-      lastPlayed.innerHTML = styledText;
-      lastPlayed.classList.remove("marquee-active");
     }
 
     lastPlayed.classList.remove("blurring");
@@ -139,7 +147,7 @@ async function getSong() {
     const status = track.nowPlaying ? "Currently Listening to" : "Last Played";
 
     const text = `${status}: ${track.title} by ${track.artist}`;
-    const styledText = `${status}: ${track.title} <span class="text-light" style="font-weight: 300;">by ${track.artist}</span>`;
+    const styledText = `${status}: ${track.title} <span class="text-light" style="font-weight: 400;">by ${track.artist}</span>`;
 
     setRailText(text, styledText);
   } catch (err) {
